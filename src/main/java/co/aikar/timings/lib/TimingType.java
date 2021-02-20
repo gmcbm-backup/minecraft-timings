@@ -31,15 +31,16 @@ enum TimingType {
 
     private final boolean useCache;
 
-    public boolean useCache() {
-        return useCache;
-    }
-
     TimingType() {
         this(false);
     }
+
     TimingType(boolean useCache) {
         this.useCache = useCache;
+    }
+
+    public boolean useCache() {
+        return useCache;
     }
 
     MCTiming newTiming(Plugin plugin, String command, MCTiming parent) {

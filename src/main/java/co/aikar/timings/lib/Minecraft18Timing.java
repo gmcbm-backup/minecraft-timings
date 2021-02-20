@@ -9,11 +9,10 @@ import java.lang.reflect.Method;
 /**
  * I thought that changing return type was ABI safe, and in 1.9 I changed it from
  * void to Timing....
- *
+ * <p>
  * Well I was wrong, so for 1.8 servers, we need to use reflection to get the void return type instead.
  */
 class Minecraft18Timing extends MCTiming {
-    private final Object timing;
     private static Method startTiming;
     private static Method stopTiming;
     private static Method of;
@@ -31,6 +30,8 @@ class Minecraft18Timing extends MCTiming {
         }
     }
 
+    private final Object timing;
+
     Minecraft18Timing(Plugin plugin, String name, MCTiming parent) throws InvocationTargetException, IllegalAccessException {
         super();
         this.timing = of.invoke(null, plugin, name, parent instanceof Minecraft18Timing ? ((Minecraft18Timing) parent).timing : null);
@@ -42,7 +43,8 @@ class Minecraft18Timing extends MCTiming {
             if (startTiming != null) {
                 startTiming.invoke(timing);
             }
-        } catch (IllegalAccessException | InvocationTargetException ignored) {}
+        } catch (IllegalAccessException | InvocationTargetException ignored) {
+        }
         return this;
     }
 
@@ -52,6 +54,7 @@ class Minecraft18Timing extends MCTiming {
             if (stopTiming != null) {
                 stopTiming.invoke(timing);
             }
-        } catch (IllegalAccessException | InvocationTargetException ignored) {}
+        } catch (IllegalAccessException | InvocationTargetException ignored) {
+        }
     }
 }

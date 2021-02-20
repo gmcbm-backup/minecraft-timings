@@ -6,6 +6,7 @@ import org.bukkit.plugin.Plugin;
 
 class MinecraftTiming extends MCTiming {
     private final Timing timing;
+
     MinecraftTiming(Plugin plugin, String name, MCTiming parent) {
         super();
         this.timing = Timings.of(plugin, name, parent instanceof MinecraftTiming ? ((MinecraftTiming) parent).timing : null);

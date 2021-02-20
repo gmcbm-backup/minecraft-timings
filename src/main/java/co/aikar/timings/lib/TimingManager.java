@@ -1,6 +1,7 @@
 package co.aikar.timings.lib;
 
 import org.bukkit.plugin.Plugin;
+
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
@@ -8,9 +9,8 @@ import java.util.Map;
 @SuppressWarnings("unused")
 public class TimingManager {
 
-    private static TimingType timingProvider;
     private static final Object LOCK = new Object();
-
+    private static TimingType timingProvider;
     private final Plugin plugin;
     private final Map<String, MCTiming> timingCache = new HashMap<>(0);
 

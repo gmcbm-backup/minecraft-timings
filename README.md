@@ -1,18 +1,20 @@
 # Minecraft Timings Library
+
 This library lets Bukkit Plugin developers SAFELY add Timings support to their plugin.
 
 There are 2 versions of Timings
-  - V1: Used by Spigot. Developed by Aikar and labeled "Spigot Timings"
-  - V2: Relabeled "Minecraft Timings", and supported by many various server software products.
-  
-Timings v2 added a proper API, however implementing it meant that your plugin would REQUIRE Paper,
-or else things would blow up around Timings.
 
-This library will safely analyze the current environment, and load an appropriate timings integration
-according to what is available.
+- V1: Used by Spigot. Developed by Aikar and labeled "Spigot Timings"
+- V2: Relabeled "Minecraft Timings", and supported by many various server software products.
 
-If using on CraftBukkit, or older versions of Spigot before Timings got added, then a "no op" Timings
-handler will be used that does nothing.
+Timings v2 added a proper API, however implementing it meant that your plugin would REQUIRE Paper, or else things would
+blow up around Timings.
+
+This library will safely analyze the current environment, and load an appropriate timings integration according to what
+is available.
+
+If using on CraftBukkit, or older versions of Spigot before Timings got added, then a "no op" Timings handler will be
+used that does nothing.
 
 On Spigot, Timings v1 will be used.
 
@@ -21,7 +23,9 @@ On everything else (Paper 1.8.8+), v2 will be used.
 ## Usage
 
 Simply add my maven repo to your plugin and add v1.0.2 as a dependency, and shade/shadow it in.
+
 ### Maven
+
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -71,6 +75,7 @@ Simply add my maven repo to your plugin and add v1.0.2 as a dependency, and shad
     </build>
 </project>
 ```
+
 ### Gradle
 
 ```gradle
@@ -107,7 +112,9 @@ shadowJar {
 ```
 
 ### Code
+
 In your plugin
+
 ```java
 private static TimingManager timingManager;
 public void onEnable() {
@@ -117,4 +124,5 @@ public static MCTiming timing(String name) {
     return timingManager.of(name);
 }
 ```
+
 Then use `YourPlugin.timing("Foo")` or don't use static and just use a dependency injection approach.

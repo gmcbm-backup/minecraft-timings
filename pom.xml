@@ -10,6 +10,7 @@
     <packaging>jar</packaging>
 
     <name>MinecraftTimings</name>
+    <description>This library lets Bukkit Plugin developers SAFELY add Timings support to their plugin.</description>
     <url>https://github.com/gmcbm-backup/minecraft-timings</url>
     <inceptionYear>2017</inceptionYear>
 

@@ -4,7 +4,7 @@
 
     <groupId>net.gmcbm.dependencies</groupId>
     <artifactId>minecraft-timings</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>MinecraftTimings</name>
@@ -24,7 +24,7 @@
         <connection>scm:git:git://github.com/gmcbm-backup/minecraft-timings.git</connection>
         <developerConnection>scm:git:git@github.com:gmcbm-backup/minecraft-timings.git</developerConnection>
         <url>https://github.com/gmcbm-backup/minecraft-timings</url>
-        <tag>v1.0.4</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <issueManagement>

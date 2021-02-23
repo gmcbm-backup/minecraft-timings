@@ -3,6 +3,7 @@ package co.aikar.timings.lib;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 
+import javax.annotation.Nonnull;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -13,6 +14,7 @@ import java.lang.reflect.Method;
  * Well I was wrong, so for 1.8 servers, we need to use reflection to get the void return type instead.
  */
 class Minecraft18Timing extends MCTiming {
+
     private static Method startTiming;
     private static Method stopTiming;
     private static Method of;
@@ -32,13 +34,15 @@ class Minecraft18Timing extends MCTiming {
 
     private final Object timing;
 
-    Minecraft18Timing(Plugin plugin, String name, MCTiming parent) throws InvocationTargetException, IllegalAccessException {
+    Minecraft18Timing(Plugin plugin, String name, MCTiming parent) throws
+            InvocationTargetException, IllegalAccessException {
         super();
-        this.timing = of.invoke(null, plugin, name, parent instanceof Minecraft18Timing ? ((Minecraft18Timing) parent).timing : null);
+        this.timing = of.invoke(null, plugin, name, parent instanceof Minecraft18Timing ?
+                ((Minecraft18Timing) parent).timing : null);
     }
 
     @Override
-    public MCTiming startTiming() {
+    public @Nonnull MCTiming startTiming() {
         try {
             if (startTiming != null) {
                 startTiming.invoke(timing);

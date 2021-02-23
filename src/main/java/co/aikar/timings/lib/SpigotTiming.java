@@ -3,7 +3,10 @@ package co.aikar.timings.lib;
 import org.bukkit.Bukkit;
 import org.spigotmc.CustomTimingsHandler;
 
+import javax.annotation.Nonnull;
+
 class SpigotTiming extends MCTiming {
+
     private final CustomTimingsHandler timing;
 
     SpigotTiming(String name) {
@@ -12,7 +15,8 @@ class SpigotTiming extends MCTiming {
     }
 
     @Override
-    public MCTiming startTiming() {
+    public @Nonnull
+    MCTiming startTiming() {
         if (Bukkit.isPrimaryThread()) {
             timing.startTiming();
         }

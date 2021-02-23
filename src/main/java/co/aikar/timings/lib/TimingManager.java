@@ -6,8 +6,7 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
-@SuppressWarnings("unused")
-public class TimingManager {
+public final class TimingManager {
 
     private static final Object LOCK = new Object();
     private static TimingType timingProvider;
@@ -18,27 +17,22 @@ public class TimingManager {
         this.plugin = plugin;
     }
 
-    @SuppressWarnings("WeakerAccess")
     public static TimingManager of(Plugin plugin) {
         return new TimingManager(plugin);
     }
 
-    @SuppressWarnings("WeakerAccess")
     public MCTiming ofStart(String name) {
         return ofStart(name, null);
     }
 
-    @SuppressWarnings("WeakerAccess")
     public MCTiming ofStart(String name, MCTiming parent) {
         return of(name, parent).startTiming();
     }
 
-    @SuppressWarnings("WeakerAccess")
     public MCTiming of(String name) {
         return of(name, null);
     }
 
-    @SuppressWarnings("WeakerAccess")
     public MCTiming of(String name, MCTiming parent) {
         if (timingProvider == null) {
             synchronized (LOCK) {

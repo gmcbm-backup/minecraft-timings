@@ -7,6 +7,7 @@
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/gmcbm-backup/minecraft-timings?label=Maintainability)](https://codeclimate.com/github/gmcbm-backup/minecraft-timings)
 [![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/gmcbm-backup/minecraft-timings?label=Vulnerabilities)](https://snyk.io/test/github/gmcbm-backup/minecraft-timings)
 [![License](https://img.shields.io/github/license/gmcbm-backup/minecraft-timings?label=License)](https://github.com/gmcbm-backup/minecraft-timings/blob/master/LICENSE)
+![Maven Central](https://img.shields.io/maven-central/v/net.gmcbm.dependencies/minecraft-timings)
 
 ---
 

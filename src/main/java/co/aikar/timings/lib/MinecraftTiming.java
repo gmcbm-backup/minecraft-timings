@@ -17,7 +17,8 @@ class MinecraftTiming extends MCTiming {
     }
 
     @Override
-    public @Nonnull MCTiming startTiming() {
+    public @Nonnull
+    MCTiming startTiming() {
         timing.startTimingIfSync();
         return this;
     }

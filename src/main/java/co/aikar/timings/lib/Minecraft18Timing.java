@@ -42,7 +42,8 @@ class Minecraft18Timing extends MCTiming {
     }
 
     @Override
-    public @Nonnull MCTiming startTiming() {
+    public @Nonnull
+    MCTiming startTiming() {
         try {
             if (startTiming != null) {
                 startTiming.invoke(timing);

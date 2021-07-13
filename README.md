@@ -1,7 +1,6 @@
 # Minecraft Timings Library
 
-[![Build status (Travis)](https://img.shields.io/travis/com/gmcbm-backup/minecraft-timings/fork?label=Travis&logo=travis)](https://travis-ci.com/gmcbm-backup/minecraft-timings)
-[![Build status (Jenkins)](https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fci.gmcbm.net%2Fjob%2Fgmcbm-backup%2Fjob%2Fminecraft-timings%2Fjob%2Ffork%2F&label=Jenkins&logo=jenkins)](https://ci.gmcbm.net/job/gmcbm-backup/job/minecraft-timings)
+[![Build Status](https://ci.ursinn.dev/job/gmcbm-backup/job/minecraft-timings/badge/icon)](https://ci.ursinn.dev/job/gmcbm-backup/job/minecraft-timings/)
 [![Github last commit date](https://img.shields.io/github/last-commit/gmcbm-backup/minecraft-timings?label=Updated&logo=github)](https://github.com/gmcbm-backup/minecraft-timings/commits)
 [![Codecov](https://img.shields.io/codecov/c/gh/gmcbm-backup/minecraft-timings?label=Coverage&logo=codecov)](https://app.codecov.io/gh/gmcbm-backup/minecraft-timings)
 [![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/gmcbm-backup/minecraft-timings?label=Maintainability)](https://codeclimate.com/github/gmcbm-backup/minecraft-timings)
